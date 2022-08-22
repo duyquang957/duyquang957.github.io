@@ -21,7 +21,7 @@ function topFunction() {
 // Functional Sticky Navbar
 window.onscroll = function () {
   myFunction();
-  scrollFunction();
+  //scrollFunction();
 };
 
 var navbar = document.querySelector("nav");
