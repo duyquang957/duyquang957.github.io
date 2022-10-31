@@ -595,7 +595,7 @@
   #features {
     height: 100%;
     padding-bottom: 200px;
-    border-bottom: 1px solid #262626;
+    /* border-bottom: 1px solid #262626; */
   }
   
   .features_3 {
