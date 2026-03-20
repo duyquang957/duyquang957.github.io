@@ -1,36 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RevDashx</title>
-    
-    <meta http-equiv="refresh" content="0; url=https://www.facebook.com/people/RevDashx/61584854761311/" />
-    
-    <script type="text/javascript">
-        // METHOD 2: JavaScript Redirect (Primary - Faster)
-        // Replace the URL inside the quotes with your Facebook Page link
-        window.location.replace("https://www.facebook.com/people/RevDashx/61584854761311/");
-    </script>
+    <title>RevDashx - GPS Engine Sounds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            text-align: center;
-            padding-top: 60px;
-            color: #333;
-            background-color: #f0f2f5;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        a {
-            color: #007aff;
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* Nền gradient tối chuyển động tạo cảm giác lượn sóng/chiều sâu */
+            background: linear-gradient(-45deg, #050505, #242d4a, #0a0a0a, #232a37);
+            background-size: 400% 400%;
+            animation: waveGradient 15s ease infinite;
+        }
+
+        @keyframes waveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Vùng chứa với hiệu ứng Glassmorphism và Zoom Out */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 50px 40px;
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+            
+            /* Hiệu ứng kính (Glassmorphism) */
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+            /* Hiệu ứng Zoom Out khi load trang */
+            opacity: 0;
+            transform: scale(1.15);
+            animation: zoomOutIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            
+            /* Thêm max-height và overflow để hỗ trợ cuộn trên màn hình nhỏ nếu nội dung quá dài */
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        /* Ẩn thanh cuộn cho container nhưng vẫn cho phép cuộn */
+        .container::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        @keyframes zoomOutIn {
+            0% {
+                opacity: 0;
+                transform: scale(1.15);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Icon Ứng dụng mô phỏng CSS */
+        .app-icon-placeholder {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #2a2d35, #101115);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #4a90e2;
+        }
+
+        .app-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            object-fit: cover; /* Giữ tỷ lệ ảnh */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #a0a5b1;
+            margin-bottom: 20px;
+        }
+
+        .desc-container {
+            min-height: 80px; /* Giữ layout ổn định khi đổi ngôn ngữ */
+            margin-bottom: 25px;
+        }
+
+        .desc-container p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            font-weight: 300;
+            color: #e2e2e2;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .desc-container p.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ----- THÊM CSS CHO VIDEO YOUTUBE ----- */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            /* Tỷ lệ khung hình 16:9 */
+            padding-bottom: 56.25%; 
+            margin-bottom: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* -------------------------------------- */
+
+        /* Nút tải xuống CSS thuần */
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 200px;
+            padding: 12px 24px;
+            border-radius: 12px;
             text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn i {
+            font-size: 1.4rem;
+        }
+
+        .btn-texts {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .btn-texts span:first-child {
+            font-size: 0.65rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #a0a5b1;
+        }
+
+        /* Chọn ngôn ngữ */
+        .lang-selector {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .lang-selector span {
+            font-size: 0.85rem;
+            color: #6b7280;
+            cursor: pointer;
+            transition: color 0.2s;
+            font-weight: 600;
+        }
+
+        .lang-selector span:hover {
+            color: #fff;
+        }
+
+        .lang-selector span.active {
+            color: #fff;
+        }
+
+        .lang-divider {
+            color: #374151;
         }
     </style>
 </head>
 <body>
-    <h3>Redirecting to Support Facebook Page...</h3>
-    <p>
-        If you are not redirected automatically, <a href="https://www.facebook.com/people/RevDashx/61584854761311/">click here</a>.
-    </p>
+
+    <div class="container">
+
+        <img class="app-icon" src="images/RevDashx/icon.png" alt="RevDashx Icon">
+        
+        <h1>RevDashx</h1>
+        <h2>GPS Engine Sounds</h2>
+
+        <div class="desc-container">
+            <p id="desc-vi" class="active">Biến thiết bị di động của bạn thành màn hình đồng hồ siêu xe với GPS và bản đồ chính xác. Trải nghiệm âm thanh động cơ giả lập chân thực đồng bộ hoàn hảo với tốc độ của bạn.</p>
+            <p id="desc-fr">Transformez votre appareil mobile en un tableau de bord de supercar avec GPS et cartes précises. Découvrez des sons de moteur simulés réalistes parfaitement synchronisés avec votre vitesse.</p>
+            <p id="desc-es">Convierte tu dispositivo móvil en una pantalla de tablero de superdeportivo con GPS y mapas precisos. Experimenta sonidos de motor simulados realistas y perfectamente sincronizados con tu velocidad.</p>
+            <p id="desc-pt">Transforma o teu dispositivo móvel num ecrã de painel de supercarro com GPS e mapas precisos. Experimenta sons de motor simulados realistas perfeitamente sincronizados com a tua velocidade.</p>
+            <p id="desc-br">Transforme seu dispositivo móvel em uma tela de painel de supercarro com GPS e mapas precisos. Experimente sons de motor simulados realistas perfeitamente sincronizados com sua velocidade.</p>
+            <p id="desc-in">अपने मोबाइल डिवाइस को GPS और सटीक मानचित्रों के साथ सुपरकार डैशबोर्ड स्क्रीन में बदलें। अपनी गति के साथ पूरी तरह से सिंक्रनाइज़ किए गए यथार्थवादी सिम्युलेटेड इंजन ध्वनियों का अनुभव करें।</p>
+            <p id="desc-en">Transform your mobile device into a supercar dashboard screen with GPS and precise maps. Experience realistic simulated engine sounds perfectly synchronized with your speed.</p>
+        </div>
+
+        <div class="download-buttons">
+            <a href="https://apps.apple.com/dk/app/revdashx-gps-engine-sounds/id6756336553" class="btn" target="_blank">
+                <i class="fa-brands fa-apple"></i>
+                <div class="btn-texts">
+                    <span>Download on the</span>
+                    <span>App Store</span>
+                </div>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.dovirtual.RevDashx" class="btn" target="_blank">
+                <i class="fa-brands fa-google-play"></i>
+                <div class="btn-texts">
+                    <span>GET IT ON</span>
+                    <span>Google Play</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/rIN8MnJYJvY?autoplay=1&mute=1&loop=1&playlist=rIN8MnJYJvY" 
+                title="RevDashx Promo Video" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="lang-selector">
+            <span class="lang-btn active" onclick="changeLang('vi')">VN</span> <span class="lang-divider">|</span>
+            <span class="lang-btn" onclick="changeLang('fr')">FR</span> <span class="lang-divider">|</span>
+            <span class="lang-btn" onclick="changeLang('es')">ES</span> <span class="lang-divider">|</span>
+            <span class="lang-btn" onclick="changeLang('pt')">PT</span> <span class="lang-divider">|</span>
+            <span class="lang-btn" onclick="changeLang('br')">BR</span> <span class="lang-divider">|</span>
+            <span class="lang-btn" onclick="changeLang('in')">IN</span> <span class="lang-divider">|</span>
+            <span class="lang-btn" onclick="changeLang('en')">EN</span>
+        </div>
+    </div>
+
+    <script>
+        function changeLang(lang) {
+            // Ẩn tất cả đoạn văn
+            document.querySelectorAll('.desc-container p').forEach(p => p.classList.remove('active'));
+            // Hiện đoạn văn được chọn
+            document.getElementById('desc-' + lang).classList.add('active');
+            
+            // Cập nhật trạng thái nút ngôn ngữ
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
