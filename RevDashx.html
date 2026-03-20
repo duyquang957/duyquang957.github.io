@@ -213,6 +213,27 @@
             color: #a0a5b1;
         }
 
+        /* ----- CSS CHO MẠNG XÃ HỘI ----- */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .social-links a {
+            color: #9ca3af;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #1877F2; /* Màu xanh thương hiệu Facebook */
+            transform: scale(1.15) translateY(-3px);
+            text-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+        }
+
         /* Chọn ngôn ngữ */
         .lang-selector {
             display: flex;
@@ -286,6 +307,12 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
             </iframe>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/people/RevDashx/61584854761311/" target="_blank" title="Follow Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
         </div>
 
         <div class="lang-selector">
