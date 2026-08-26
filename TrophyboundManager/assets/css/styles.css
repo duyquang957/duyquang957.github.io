@@ -713,11 +713,9 @@ h3 {
 .store-button svg {
   width: 31px;
   height: 31px;
-  fill: none;
-  stroke: var(--lime);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
+  color: var(--lime);
+  fill: currentColor;
+  stroke: none;
 }
 
 .store-button > span {
@@ -1980,7 +1978,7 @@ h3 {
 }
 
 .store-button--light svg {
-  stroke: var(--ink-950);
+  color: var(--ink-950);
 }
 
 .download-card__note {
@@ -2736,6 +2734,43 @@ html[lang="th"] .languages__content h2,
 html[lang="ar"] .languages__content h2 {
   letter-spacing: normal;
   line-height: 1.08;
+}
+
+html[lang="vi"] .hero__title,
+html[lang="vi"] .section-heading h2,
+html[lang="vi"] .languages__content h2,
+html[lang="vi"] .download-card h2,
+html[lang="vi"] .ticker__track {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-stretch: normal;
+  font-weight: 900;
+}
+
+html[lang="vi"] .hero__title {
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+}
+
+html[lang="vi"] .hero__title em {
+  letter-spacing: -0.025em;
+}
+
+html[lang="vi"] .section-heading h2,
+html[lang="vi"] .languages__content h2,
+html[lang="vi"] .download-card h2 {
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+}
+
+html[lang="vi"] .ticker__track {
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+@media (max-width: 680px) {
+  html[lang="vi"] .hero__title {
+    line-height: 1.1;
+  }
 }
 
 html[dir="rtl"] .hero__inner {
