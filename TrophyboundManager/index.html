@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#061019">
+    <meta name="color-scheme" content="dark">
+    <meta
+      name="description"
+      content="Game quản lý bóng đá nơi bạn xây đội hình, chọn chiến thuật và trực tiếp thi đấu trong các trận bóng đá 3D."
+    >
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trophybound Manager — Dẫn dắt CLB theo cách của bạn">
+    <meta
+      property="og:description"
+      content="Xây đội hình, chọn chiến thuật và trực tiếp thi đấu trong các trận bóng đá 3D."
+    >
+    <meta property="og:image" content="assets/images/og-trophybound.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/images/app-icon-160.png?v=20260826" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/app-icon-180.png?v=20260826">
+    <link
+      rel="preload"
+      href="assets/images/hero-stadium-1536.avif"
+      imagesrcset="assets/images/hero-stadium-960.avif 960w, assets/images/hero-stadium-1536.avif 1536w"
+      imagesizes="100vw"
+      as="image"
+      type="image/avif"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260826-4">
+    <script src="assets/js/translations-extra.js?v=20260826-4" defer></script>
+    <script src="assets/js/app.js?v=20260826-4" defer></script>
+    <title>Trophybound Manager — Dẫn dắt CLB theo cách của bạn</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Bỏ qua điều hướng</a>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner shell">
+        <a class="brand" href="#game" aria-label="Trophybound Manager — Trang chủ" data-i18n-aria="a11y.brandHome">
+          <picture class="brand__mark">
+            <source
+              srcset="assets/images/app-icon-160.webp?v=20260826 160w, assets/images/app-icon-320.webp?v=20260826 320w"
+              sizes="48px"
+              type="image/webp"
+            >
+            <img src="assets/images/app-icon-160.png?v=20260826" width="48" height="48" alt="" decoding="async">
+          </picture>
+          <span class="brand__type">
+            <strong>TROPHYBOUND</strong>
+            <small>MANAGER</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Điều hướng chính" data-i18n-aria="a11y.mainNav">
+          <a href="#game" data-nav-link data-i18n="nav.game">Tổng quan</a>
+          <a href="#features" data-nav-link data-i18n="nav.features">Tính năng</a>
+          <a href="#trophies" data-nav-link data-i18n="nav.trophies">Danh hiệu</a>
+          <a href="#languages" data-nav-link data-i18n="nav.languages">Ngôn ngữ</a>
+        </nav>
+
+        <div class="header-actions">
+          <label class="language-select" aria-label="Chọn ngôn ngữ" data-i18n-aria="a11y.language">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.1-2.2 3.2-5.2 3.2-9S14.1 5.2 12 3m0 18c-2.1-2.2-3.2-5.2-3.2-9S9.9 5.2 12 3M3.6 9h16.8M3.6 15h16.8"/>
+            </svg>
+            <select data-language-select>
+              <option value="vi" lang="vi" dir="auto">VI · Tiếng Việt</option>
+              <option value="en" lang="en" dir="auto">EN · English</option>
+              <option value="en-SG" lang="en-SG" dir="auto">EN-SG · English (Singapore)</option>
+              <option value="ja" lang="ja" dir="auto">JA · 日本語</option>
+              <option value="ko" lang="ko" dir="auto">KO · 한국어</option>
+              <option value="es" lang="es" dir="auto">ES · Español</option>
+              <option value="de" lang="de" dir="auto">DE · Deutsch</option>
+              <option value="fr" lang="fr" dir="auto">FR · Français</option>
+              <option value="it" lang="it" dir="auto">IT · Italiano</option>
+              <option value="pt-BR" lang="pt-BR" dir="auto">PT-BR · Português (Brasil)</option>
+              <option value="pt-PT" lang="pt-PT" dir="auto">PT-PT · Português (Portugal)</option>
+              <option value="id-ID" lang="id-ID" dir="auto">ID · Bahasa Indonesia</option>
+              <option value="hi-IN" lang="hi-IN" dir="auto">HI · हिन्दी</option>
+              <option value="th" lang="th" dir="auto">TH · ไทย</option>
+              <option value="ar" lang="ar" dir="auto">AR · العربية</option>
+            </select>
+          </label>
+          <a class="button button--mini desktop-download" href="#download" data-i18n="nav.download">Tải game</a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Mở menu"
+            data-menu-toggle
+            data-i18n-aria="a11y.openMenu"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Điều hướng di động" data-mobile-menu data-i18n-aria="a11y.mobileNav">
+        <a href="#game" data-nav-link data-i18n="nav.game">Tổng quan</a>
+        <a href="#features" data-nav-link data-i18n="nav.features">Tính năng</a>
+        <a href="#trophies" data-nav-link data-i18n="nav.trophies">Danh hiệu</a>
+        <a href="#languages" data-nav-link data-i18n="nav.languages">Ngôn ngữ</a>
+        <a class="button" href="#download" data-i18n="nav.download">Tải game</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="game" data-hero>
+        <picture class="hero__media" aria-hidden="true">
+          <source
+            srcset="assets/images/hero-stadium-960.avif 960w, assets/images/hero-stadium-1536.avif 1536w"
+            sizes="100vw"
+            type="image/avif"
+          >
+          <source
+            srcset="assets/images/hero-stadium-960.webp 960w, assets/images/hero-stadium-1536.webp 1536w"
+            sizes="100vw"
+            type="image/webp"
+          >
+          <img src="assets/images/hero-stadium-fallback.jpg" width="1536" height="1024" alt="" fetchpriority="high">
+        </picture>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="hero__wind" aria-hidden="true">
+          <i class="hero__wind-line hero__wind-line--one"></i>
+          <i class="hero__wind-line hero__wind-line--two"></i>
+          <i class="hero__wind-line hero__wind-line--three"></i>
+        </div>
+        <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
+
+        <div class="hero__inner shell">
+          <div class="hero__copy">
+            <div class="eyebrow-pill hero__eyebrow">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.eyebrow">QUẢN LÝ BÓNG ĐÁ THẾ HỆ MỚI</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span data-i18n="hero.title">CLB CỦA BẠN</span>
+              <em data-i18n="hero.titleAccent">BẠN QUYẾT ĐỊNH</em>
+            </h1>
+            <p class="hero__description" data-i18n="hero.description">
+              Xây đội hình, chọn chiến thuật và trực tiếp thi đấu trong các trận bóng đá 3D.
+            </p>
+
+            <div class="store-row" aria-label="Liên kết cửa hàng" data-i18n-aria="a11y.storeLinks">
+              <a class="store-button" href="#download" data-store-link="appStore">
+                <svg aria-hidden="true" viewBox="0 0 32 32">
+                  <rect x="8" y="3" width="16" height="26" rx="4"/>
+                  <path d="M13 7h6M14.5 25h3"/>
+                </svg>
+                <span>
+                  <small data-store-kicker="appStore">SẮP CÓ TRÊN</small>
+                  <strong>App Store</strong>
+                </span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a class="store-button" href="#download" data-store-link="googlePlay">
+                <svg aria-hidden="true" viewBox="0 0 32 32">
+                  <path d="M7 5.5v21l18-10.5L7 5.5Z"/>
+                  <path d="m8 6 11 10-11 10M19 16l5.5-3.2M19 16l5.5 3.2"/>
+                </svg>
+                <span>
+                  <small data-store-kicker="googlePlay">SẮP CÓ TRÊN</small>
+                  <strong>Google Play</strong>
+                </span>
+                <i aria-hidden="true">↗</i>
+              </a>
+            </div>
+            <p class="store-note" id="store-note" data-i18n="store.pending">
+              Liên kết cửa hàng sẽ được cập nhật khi game phát hành.
+            </p>
+
+            <div class="mode-list" aria-label="Chế độ trận đấu" data-i18n-aria="a11y.matchModes">
+              <span><b>01</b><span data-i18n="hero.modeControl">Điều khiển</span></span>
+              <span><b>02</b><span data-i18n="hero.modeWatch">Xem trận</span></span>
+              <span><b>03</b><span data-i18n="hero.modeQuick">Chơi nhanh</span></span>
+            </div>
+          </div>
+
+          <aside class="match-card" aria-label="Trận đấu nổi bật" data-i18n-aria="a11y.featuredMatch" hidden>
+            <div class="match-card__top">
+              <span><i></i><span data-i18n="hero.matchday">MATCHDAY</span></span>
+              <b>3D LIVE</b>
+            </div>
+            <div class="match-card__teams">
+              <span class="mini-crest mini-crest--home" aria-hidden="true">T</span>
+              <div>
+                <strong>TROPHYBOUND FC</strong>
+                <small>VS</small>
+                <strong>NORTHSTAR ATHLETIC</strong>
+              </div>
+              <span class="mini-crest mini-crest--away" aria-hidden="true">N</span>
+            </div>
+            <div class="match-card__footer">
+              <span data-i18n="hero.yourCall">Quyết định là của bạn</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>
+            </div>
+          </aside>
+        </div>
+
+        <a class="scroll-cue" href="#overview" aria-label="Cuộn để khám phá" data-i18n-aria="a11y.scroll">
+          <span data-i18n="hero.explore">KHÁM PHÁ</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="metric-bar" aria-label="Thông tin nổi bật" data-i18n-aria="a11y.highlights">
+        <div class="shell metric-bar__inner">
+          <div class="metric reveal">
+            <strong data-counter="14">14</strong>
+            <span data-i18n="metrics.competitions">giải đấu trong lộ trình</span>
+          </div>
+          <div class="metric reveal">
+            <strong data-counter="15">15</strong>
+            <span data-i18n="metrics.locales">locale trong game</span>
+          </div>
+          <div class="metric reveal">
+            <strong data-counter="3">3</strong>
+            <span data-i18n="metrics.matchModes">cách trải nghiệm trận đấu</span>
+          </div>
+          <div class="metric metric--word reveal">
+            <strong>100%</strong>
+            <span data-i18n="metrics.fictional">thế giới bóng đá nguyên bản</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span data-i18n="ticker.squad">XÂY ĐỘI HÌNH</span><i>✦</i>
+          <span data-i18n="ticker.tactics">ĐỊNH HÌNH CHIẾN THUẬT</span><i>✦</i>
+          <span data-i18n="ticker.match">LÀM CHỦ TRẬN ĐẤU</span><i>✦</i>
+          <span data-i18n="ticker.glory">CHINH PHỤC VINH QUANG</span><i>✦</i>
+          <span data-i18n="ticker.squad">XÂY ĐỘI HÌNH</span><i>✦</i>
+          <span data-i18n="ticker.tactics">ĐỊNH HÌNH CHIẾN THUẬT</span><i>✦</i>
+          <span data-i18n="ticker.match">LÀM CHỦ TRẬN ĐẤU</span><i>✦</i>
+          <span data-i18n="ticker.glory">CHINH PHỤC VINH QUANG</span><i>✦</i>
+        </div>
+      </div>
+
+      <section class="overview section shell" id="overview">
+        <div class="section-heading overview__heading reveal">
+          <span class="section-kicker" data-i18n="overview.eyebrow">CÂU CHUYỆN CỦA BẠN</span>
+          <h2>
+            <span data-i18n="overview.title">KHÔNG CHỈ ĐỨNG NGOÀI</span>
+            <em data-i18n="overview.titleAccent">ĐƯỜNG BIÊN</em>
+          </h2>
+          <p data-i18n="overview.description">
+            Trophybound Manager kết hợp chiều sâu quản lý với sức nóng sân cỏ 3D. Mỗi quyết định trước trận đều hiện hữu khi bóng lăn.
+          </p>
+        </div>
+
+        <div class="overview__visual reveal">
+          <div class="pitch-board" aria-hidden="true">
+            <span class="pitch-board__line pitch-board__line--half"></span>
+            <span class="pitch-board__circle"></span>
+            <span class="pitch-board__box pitch-board__box--left"></span>
+            <span class="pitch-board__box pitch-board__box--right"></span>
+            <i class="player-dot player-dot--1">GK</i>
+            <i class="player-dot player-dot--2">CB</i>
+            <i class="player-dot player-dot--3">CB</i>
+            <i class="player-dot player-dot--4">CM</i>
+            <i class="player-dot player-dot--5">CM</i>
+            <i class="player-dot player-dot--6">LW</i>
+            <i class="player-dot player-dot--7">RW</i>
+            <i class="player-dot player-dot--8">ST</i>
+            <svg class="tactic-arrow tactic-arrow--one" viewBox="0 0 100 50"><path d="M4 46C35 45 51 12 94 8m0 0-12-5m12 5-8 10"/></svg>
+            <svg class="tactic-arrow tactic-arrow--two" viewBox="0 0 100 50"><path d="M4 46C35 45 51 12 94 8m0 0-12-5m12 5-8 10"/></svg>
+          </div>
+          <div class="floating-stat floating-stat--rating">
+            <small data-i18n="overview.teamRating">CHỈ SỐ ĐỘI</small>
+            <strong>84</strong>
+            <span>+4.2%</span>
+          </div>
+          <div class="floating-stat floating-stat--formation">
+            <small data-i18n="overview.formation">SƠ ĐỒ</small>
+            <strong>4–2–3–1</strong>
+            <span data-i18n="overview.balanced">Cân bằng</span>
+          </div>
+        </div>
+
+        <div class="overview__principles">
+          <article class="principle reveal">
+            <span>01</span>
+            <div>
+              <h3 data-i18n="overview.p1Title">Tư duy của HLV</h3>
+              <p data-i18n="overview.p1Body">Chọn vai trò, nhịp độ, pressing và hướng tấn công cho từng thử thách.</p>
+            </div>
+          </article>
+          <article class="principle reveal">
+            <span>02</span>
+            <div>
+              <h3 data-i18n="overview.p2Title">Bản lĩnh trên sân</h3>
+              <p data-i18n="overview.p2Body">Điều khiển trận 3D, theo dõi AI hoặc mô phỏng nhanh theo nhịp chơi của bạn.</p>
+            </div>
+          </article>
+          <article class="principle reveal">
+            <span>03</span>
+            <div>
+              <h3 data-i18n="overview.p3Title">Tầm nhìn của nhà quản lý</h3>
+              <p data-i18n="overview.p3Body">Phát triển tài chính, người hâm mộ, học viện, sân tập và sân vận động.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="features section" id="features">
+        <div class="shell">
+          <div class="section-heading section-heading--center reveal">
+            <span class="section-kicker" data-i18n="features.eyebrow">BẢN THIẾT KẾ CÂU LẠC BỘ</span>
+            <h2>
+              <span data-i18n="features.title">MỌI QUYẾT ĐỊNH</span>
+              <em data-i18n="features.titleAccent">ĐỊNH HÌNH MÙA GIẢI</em>
+            </h2>
+            <p data-i18n="features.description">Từ phòng chiến thuật đến tiếng còi mãn cuộc — bạn làm chủ toàn bộ hành trình.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card feature-card--wide reveal">
+              <span class="feature-card__number">01</span>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M14 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM34 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM24 24a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM4 35c0-7 4-12 10-12 3 0 5 1 7 3m23 9c0-7-4-12-10-12-3 0-5 1-7 3M12 45c0-9 5-15 12-15s12 6 12 15"/></svg>
+              </div>
+              <h3 data-i18n="features.squadTitle">XÂY ĐỘI HÌNH CỦA BẠN</h3>
+              <p data-i18n="features.squadBody">Chọn đội hình xuất phát, quản lý thể lực và đặt từng cầu thủ vào đúng vai trò.</p>
+              <span class="feature-card__tag">SQUAD</span>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-card__number">02</span>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="4" y="7" width="40" height="34" rx="3"/><path d="M24 7v34M4 24h40M19 24a5 5 0 1 0 10 0 5 5 0 0 0-10 0ZM4 15h8v18H4m40-18h-8v18h8"/></svg>
+              </div>
+              <h3 data-i18n="features.tacticsTitle">ĐỊNH HÌNH LỐI CHƠI</h3>
+              <p data-i18n="features.tacticsBody">Tinh chỉnh sơ đồ, nhịp độ, chuyền bóng, pressing và ý đồ tấn công.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-card__number">03</span>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M24 4 6 14v20l18 10 18-10V14L24 4Z"/><path d="m24 4 6 13-6 7-6-7 6-13Zm0 20v20m-18-30 12 3m24-3-12 3M6 34l12-6m24 6-12-6"/></svg>
+              </div>
+              <h3 data-i18n="features.matchTitle">LÀM CHỦ TRẬN ĐẤU 3D</h3>
+              <p data-i18n="features.matchBody">Tự điều khiển, quan sát AI đấu AI hoặc dùng Quick Sim để đi tiếp.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-card__number">04</span>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M8 10h24v28H8zM16 4h24v28h-8M13 18h14M13 25h14M13 32h8"/><circle cx="34" cy="37" r="7"/><path d="m39 42 5 4"/></svg>
+              </div>
+              <h3 data-i18n="features.transferTitle">CHIÊU MỘ CÓ CHỦ ĐÍCH</h3>
+              <p data-i18n="features.transferBody">Scout thị trường, so sánh năng lực và tìm đúng mảnh ghép hệ thống cần.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-card__number">05</span>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M10 5h28v8c0 10-6 18-14 18S10 23 10 13V5Z"/><path d="M10 10H4v5c0 6 4 10 10 10m24-15h6v5c0 6-4 10-10 10M24 31v8m-10 5h20M18 39h12"/></svg>
+              </div>
+              <h3 data-i18n="features.trophyTitle">CHINH PHỤC DANH HIỆU</h3>
+              <p data-i18n="features.trophyBody">Bám đuổi ngôi đầu giải VĐQG và chiến đấu qua từng vòng cúp.</p>
+            </article>
+            <article class="feature-card feature-card--wide reveal">
+              <span class="feature-card__number">06</span>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M5 43h38M9 43V22l15-9 15 9v21M17 43V30h14v13M3 22 24 9l21 13M24 9V3m0 0h10l-3 4 3 4H24"/></svg>
+              </div>
+              <h3 data-i18n="features.clubTitle">PHÁT TRIỂN TOÀN DIỆN CLB</h3>
+              <p data-i18n="features.clubBody">Quản lý tài chính, xây cộng đồng và nâng cấp học viện, sân tập, sân vận động.</p>
+              <span class="feature-card__tag">CLUB</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase section" id="gameplay">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <span class="section-kicker" data-i18n="showcase.eyebrow">TRẢI NGHIỆM THẬT TRONG GAME</span>
+            <h2>
+              <span data-i18n="showcase.title">BẠN LẬP KẾ HOẠCH.</span>
+              <em data-i18n="showcase.titleAccent">ĐỘI BÓNG THỰC THI.</em>
+            </h2>
+            <p data-i18n="showcase.description">Khám phá đội hình, trận 3D, chiến thuật, chuyển nhượng và hành trình cúp.</p>
+          </div>
+
+          <div class="showcase__layout reveal" data-showcase>
+            <div class="showcase__tabs" role="tablist" aria-label="Ảnh gameplay" data-i18n-aria="a11y.gameplayTabs">
+              <button class="screen-tab" id="tab-match" type="button" role="tab" aria-selected="false" aria-controls="gameplay-panel" data-screen="match" hidden>
+                <span>00</span><strong data-i18n="screens.matchTab">Trận đấu 3D</strong>
+              </button>
+              <button class="screen-tab is-active" id="tab-squad" type="button" role="tab" aria-selected="true" aria-controls="gameplay-panel" data-screen="squad">
+                <span>01</span><strong data-i18n="screens.squadTab">Đội hình</strong>
+              </button>
+              <button class="screen-tab" id="tab-tactics" type="button" role="tab" aria-selected="false" aria-controls="gameplay-panel" data-screen="tactics">
+                <span>02</span><strong data-i18n="screens.tacticsTab">Chiến thuật</strong>
+              </button>
+              <button class="screen-tab" id="tab-transfers" type="button" role="tab" aria-selected="false" aria-controls="gameplay-panel" data-screen="transfers">
+                <span>03</span><strong data-i18n="screens.transfersTab">Chuyển nhượng</strong>
+              </button>
+              <button class="screen-tab" id="tab-competitions" type="button" role="tab" aria-selected="false" aria-controls="gameplay-panel" data-screen="competitions">
+                <span>04</span><strong data-i18n="screens.competitionsTab">Giải đấu</strong>
+              </button>
+            </div>
+
+            <div class="game-window" id="gameplay-panel" role="tabpanel" tabindex="0" aria-live="polite" aria-labelledby="tab-squad">
+              <div class="game-window__chrome" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <b>TROPHYBOUND // LIVE BUILD</b>
+                <i>● ONLINE</i>
+              </div>
+              <picture data-screen-picture>
+                <source
+                  data-screen-avif
+                  srcset="assets/images/gameplay/squad-760.avif 760w, assets/images/gameplay/squad-1400.avif 1400w"
+                  sizes="(max-width: 900px) 100vw, 900px"
+                  type="image/avif"
+                >
+                <source
+                  data-screen-webp
+                  srcset="assets/images/gameplay/squad-760.webp 760w, assets/images/gameplay/squad-1400.webp 1400w"
+                  sizes="(max-width: 900px) 100vw, 900px"
+                  type="image/webp"
+                >
+                <img
+                  data-screen-image
+                  src="assets/images/gameplay/squad-1400.webp"
+                  width="1400"
+                  height="647"
+                  alt="Màn hình quản lý đội hình của Trophybound Manager"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+              <div class="game-window__caption">
+                <div>
+                  <span data-i18n="screens.caption">TRONG GAME</span>
+                  <h3 data-screen-title>Xây đội hình tốt nhất</h3>
+                </div>
+                <p data-screen-body>Cân bằng vai trò, thể lực, đội hình xuất phát và ghế dự bị theo triết lý của bạn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trophies section" id="trophies" data-spotlight>
+        <picture class="trophies__backdrop" aria-hidden="true">
+          <source
+            srcset="assets/images/trophy-stadium-720.avif 720w, assets/images/trophy-stadium-1280.avif 1280w"
+            sizes="100vw"
+            type="image/avif"
+          >
+          <source
+            srcset="assets/images/trophy-stadium-720.webp 720w, assets/images/trophy-stadium-1280.webp 1280w"
+            sizes="100vw"
+            type="image/webp"
+          >
+          <img src="assets/images/trophy-stadium-fallback.jpg" width="1280" height="853" alt="" loading="lazy" decoding="async">
+        </picture>
+        <div class="trophies__overlay" aria-hidden="true"></div>
+
+        <div class="shell trophies__inner">
+          <div class="section-heading trophies__heading reveal">
+            <span class="section-kicker" data-i18n="trophies.eyebrow">HÀNH TRÌNH DANH HIỆU</span>
+            <h2>
+              <span data-i18n="trophies.title">TỪ VINH QUANG QUỐC NỘI</span>
+              <em data-i18n="trophies.titleAccent">ĐẾN ĐỈNH CAO THẾ GIỚI</em>
+            </h2>
+            <p data-i18n="trophies.description">
+              Giải VĐQG và Cúp Quốc gia hiện có thể thi đấu. Competition Hub còn vạch ra điều kiện để hướng tới các đấu trường lớn hơn.
+            </p>
+            <div class="availability-note">
+              <span><i class="availability-dot availability-dot--live"></i><span data-i18n="trophies.playable">HIỆN CÓ THỂ THI ĐẤU</span></span>
+              <span><i class="availability-dot"></i><span data-i18n="trophies.path">LỘ TRÌNH MỞ KHÓA</span></span>
+            </div>
+          </div>
+
+          <div class="trophy-grid" tabindex="0" role="region" aria-label="Danh sách cúp — dùng phím mũi tên để cuộn" data-i18n-aria="a11y.trophyScroller">
+            <article class="trophy-card is-live reveal">
+              <span class="trophy-card__status" data-i18n="trophies.playableShort">CHƠI NGAY</span>
+              <picture>
+                <source srcset="assets/images/trophies/national-cup-320.avif" type="image/avif">
+                <img src="assets/images/trophies/national-cup-320.webp" width="320" height="320" alt="Cúp Quốc gia" loading="lazy" decoding="async" data-i18n-alt="cups.nationalAlt">
+              </picture>
+              <span class="trophy-card__level">01 // DOMESTIC</span>
+              <h3 data-i18n="cups.national">CÚP QUỐC GIA</h3>
+              <p data-i18n="cups.nationalDesc">14 CLB · Loại trực tiếp</p>
+            </article>
+            <article class="trophy-card reveal">
+              <span class="trophy-card__status" data-i18n="trophies.pathShort">LỘ TRÌNH</span>
+              <picture>
+                <source srcset="assets/images/trophies/national-super-cup-320.avif" type="image/avif">
+                <img src="assets/images/trophies/national-super-cup-320.webp" width="320" height="320" alt="Siêu cúp Quốc gia" loading="lazy" decoding="async" data-i18n-alt="cups.superAlt">
+              </picture>
+              <span class="trophy-card__level">02 // DOMESTIC</span>
+              <h3 data-i18n="cups.super">SIÊU CÚP QUỐC GIA</h3>
+              <p data-i18n="cups.superDesc">Hai nhà vô địch · Một trận</p>
+            </article>
+            <article class="trophy-card reveal">
+              <span class="trophy-card__status" data-i18n="trophies.pathShort">LỘ TRÌNH</span>
+              <picture>
+                <source srcset="assets/images/trophies/regional-champions-320.avif" type="image/avif">
+                <img src="assets/images/trophies/regional-champions-320.webp" width="320" height="320" alt="Cúp Vô địch Khu vực" loading="lazy" decoding="async" data-i18n-alt="cups.regionalAlt">
+              </picture>
+              <span class="trophy-card__level">03 // REGIONAL</span>
+              <h3 data-i18n="cups.regional">CÚP VÔ ĐỊCH KHU VỰC</h3>
+              <p data-i18n="cups.regionalDesc">8 CLB · Con đường châu lục</p>
+            </article>
+            <article class="trophy-card reveal">
+              <span class="trophy-card__status" data-i18n="trophies.pathShort">LỘ TRÌNH</span>
+              <picture>
+                <source srcset="assets/images/trophies/continental-champions-320.avif" type="image/avif">
+                <img src="assets/images/trophies/continental-champions-320.webp" width="320" height="320" alt="Cúp Vô địch Châu lục" loading="lazy" decoding="async" data-i18n-alt="cups.continentalAlt">
+              </picture>
+              <span class="trophy-card__level">04 // CONTINENTAL</span>
+              <h3 data-i18n="cups.continental">CÚP VÔ ĐỊCH CHÂU LỤC</h3>
+              <p data-i18n="cups.continentalDesc">8 CLB · Vé đến thế giới</p>
+            </article>
+            <article class="trophy-card reveal">
+              <span class="trophy-card__status" data-i18n="trophies.pathShort">LỘ TRÌNH</span>
+              <picture>
+                <source srcset="assets/images/trophies/continental-challenge-320.avif" type="image/avif">
+                <img src="assets/images/trophies/continental-challenge-320.webp" width="320" height="320" alt="Cúp Thách thức Châu lục" loading="lazy" decoding="async" data-i18n-alt="cups.challengeAlt">
+              </picture>
+              <span class="trophy-card__level">05 // CONTINENTAL</span>
+              <h3 data-i18n="cups.challenge">CÚP THÁCH THỨC CHÂU LỤC</h3>
+              <p data-i18n="cups.challengeDesc">8 CLB · Đấu trường hạng hai</p>
+            </article>
+            <article class="trophy-card trophy-card--world reveal">
+              <span class="trophy-card__status" data-i18n="trophies.pathShort">LỘ TRÌNH</span>
+              <picture>
+                <source srcset="assets/images/trophies/club-world-320.avif" type="image/avif">
+                <img src="assets/images/trophies/club-world-320.webp" width="320" height="320" alt="Giải Vô địch CLB Thế giới" loading="lazy" decoding="async" data-i18n-alt="cups.worldAlt">
+              </picture>
+              <span class="trophy-card__level">06 // WORLD</span>
+              <h3 data-i18n="cups.world">GIẢI VÔ ĐỊCH CLB THẾ GIỚI</h3>
+              <p data-i18n="cups.worldDesc">8 nhà vô địch · Đỉnh cao cuối cùng</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="languages section" id="languages">
+        <div class="shell languages__layout">
+          <div class="language-orbit reveal" aria-hidden="true">
+            <div class="language-orbit__ring language-orbit__ring--outer"></div>
+            <div class="language-orbit__ring language-orbit__ring--inner"></div>
+            <div class="language-orbit__core">
+              <strong>15</strong>
+              <span>LOCALES</span>
+            </div>
+            <i class="language-bubble language-bubble--vi">VI</i>
+            <i class="language-bubble language-bubble--en">EN</i>
+            <i class="language-bubble language-bubble--ja">日</i>
+            <i class="language-bubble language-bubble--ko">한</i>
+            <i class="language-bubble language-bubble--ar">ع</i>
+            <i class="language-bubble language-bubble--es">ES</i>
+          </div>
+
+          <div class="languages__content reveal">
+            <span class="section-kicker" data-i18n="languages.eyebrow">BÓNG ĐÁ KHÔNG BIÊN GIỚI</span>
+            <h2>
+              <span data-i18n="languages.title">TRẢI NGHIỆM BẰNG</span>
+              <em data-i18n="languages.titleAccent">NGÔN NGỮ CỦA BẠN</em>
+            </h2>
+            <p data-i18n="languages.description">
+              Game và website đều hỗ trợ đầy đủ 15 locale để người chơi khám phá bằng ngôn ngữ của mình.
+            </p>
+            <div class="language-cloud" aria-label="Ngôn ngữ trong game" data-i18n-aria="a11y.gameLanguages">
+              <span class="is-website">Tiếng Việt</span>
+              <span class="is-website">English</span>
+              <span class="is-website">English (Singapore)</span>
+              <span class="is-website">Français</span>
+              <span class="is-website">Deutsch</span>
+              <span class="is-website">Español</span>
+              <span class="is-website">Italiano</span>
+              <span class="is-website">日本語</span>
+              <span class="is-website">한국어</span>
+              <span class="is-website">Português (Brasil)</span>
+              <span class="is-website">Português (Portugal)</span>
+              <span class="is-website">Bahasa Indonesia</span>
+              <span class="is-website">हिन्दी</span>
+              <span class="is-website">ไทย</span>
+              <span class="is-website">العربية</span>
+            </div>
+            <p class="languages__note"><i></i><span data-i18n="languages.note">Cả 15 ngôn ngữ đều có thể chọn ngay trên website.</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="download section shell" id="download">
+        <div class="download-card reveal" data-spotlight>
+          <div class="download-card__lines" aria-hidden="true"></div>
+          <div class="download-card__copy">
+            <span class="section-kicker" data-i18n="download.eyebrow">PHÒNG THAY ĐỒ ĐANG CHỜ</span>
+            <h2>
+              <span data-i18n="download.title">SẴN SÀNG</span>
+              <em data-i18n="download.titleAccent">TIẾP QUẢN CLB?</em>
+            </h2>
+            <p data-i18n="download.description">Chọn nền tảng và bắt đầu viết câu chuyện bóng đá của riêng bạn.</p>
+            <div class="store-row">
+              <a class="store-button store-button--light" href="#download" data-store-link="appStore">
+                <svg aria-hidden="true" viewBox="0 0 32 32">
+                  <rect x="8" y="3" width="16" height="26" rx="4"/><path d="M13 7h6M14.5 25h3"/>
+                </svg>
+                <span><small data-store-kicker="appStore">SẮP CÓ TRÊN</small><strong>App Store</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a class="store-button store-button--light" href="#download" data-store-link="googlePlay">
+                <svg aria-hidden="true" viewBox="0 0 32 32">
+                  <path d="M7 5.5v21l18-10.5L7 5.5Z"/><path d="m8 6 11 10-11 10M19 16l5.5-3.2M19 16l5.5 3.2"/>
+                </svg>
+                <span><small data-store-kicker="googlePlay">SẮP CÓ TRÊN</small><strong>Google Play</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+            </div>
+            <p class="download-card__note" data-i18n="download.note">Store links đang chờ URL phát hành chính thức.</p>
+          </div>
+          <div class="download-card__mark" aria-hidden="true">
+            <picture>
+              <source
+                srcset="assets/images/app-icon-160.webp?v=20260826 160w, assets/images/app-icon-320.webp?v=20260826 320w"
+                sizes="160px"
+                type="image/webp"
+              >
+              <img src="assets/images/app-icon-160.png?v=20260826" width="160" height="160" alt="" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__top">
+        <a class="brand brand--footer" href="#game" aria-label="Trophybound Manager — Trang chủ" data-i18n-aria="a11y.brandHome">
+          <picture class="brand__mark">
+            <source
+              srcset="assets/images/app-icon-160.webp?v=20260826 160w, assets/images/app-icon-320.webp?v=20260826 320w"
+              sizes="48px"
+              type="image/webp"
+            >
+            <img src="assets/images/app-icon-160.png?v=20260826" width="48" height="48" alt="" loading="lazy" decoding="async">
+          </picture>
+          <span class="brand__type"><strong>TROPHYBOUND</strong><small>MANAGER</small></span>
+        </a>
+        <p data-i18n="footer.tagline">CLB của bạn. Chiến thuật của bạn. Câu chuyện của bạn.</p>
+        <nav aria-label="Điều hướng chân trang" data-i18n-aria="a11y.footerNav">
+          <a href="#features" data-i18n="nav.features">Tính năng</a>
+          <a href="#trophies" data-i18n="nav.trophies">Danh hiệu</a>
+          <a href="#languages" data-i18n="nav.languages">Ngôn ngữ</a>
+          <a href="privacy-policy.html" data-i18n="footer.privacy">Quyền riêng tư</a>
+          <a href="terms.html" data-i18n="footer.terms">Điều khoản</a>
+          <a href="account-deletion.html" data-i18n="footer.accountDeletion">Xóa tài khoản</a>
+        </nav>
+      </div>
+      <div class="shell site-footer__bottom">
+        <p data-i18n="footer.disclaimer">Các CLB, giải đấu và cầu thủ trong Trophybound Manager được sáng tạo riêng cho game.</p>
+        <p>© <span data-current-year>2026</span> playluma. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast></div>
+    <noscript>
+      <div class="noscript">Trang web vẫn hiển thị đầy đủ, nhưng cần JavaScript để đổi ngôn ngữ và xem thư viện tương tác.</div>
+    </noscript>
+  </body>
+</html>
