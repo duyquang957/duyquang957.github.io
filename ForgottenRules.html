@@ -1,291 +1,93 @@
-<!DOCTYPE html>
-<html dir="auto" lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Forgotten Rules</title>
-
-	<meta name="description" content="My Page Description" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" href="images/favicon/favicon-32x32.png" />
-
-	<meta property="og:title" content="My Page Title" />
-	<meta property="og:description" content="My Page Description" />
-	<meta property="og:image" content="assets/og-image.png" />
-    
-	<link rel="stylesheet" href="assets/tobi.css" />
-	<link rel="stylesheet" href="assets/style.css" />
-    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-
-</head>
-	<body>
-       <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#030713">
+    <meta name="description" content="Explore Forgotten Rules, a free-roaming open-world action game for Android and iOS.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Playluma">
+    <meta property="og:title" content="Forgotten Rules — Playluma">
+    <meta property="og:description" content="Drive, race and explore a large open world on Android and iOS.">
+    <meta property="og:url" content="https://playluma.com/ForgottenRules.html">
+    <meta property="og:image" content="https://playluma.com/assets/og-forgotten-rules.png">
+    <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://playluma.com/assets/og-forgotten-rules.png">
+    <link rel="canonical" href="https://playluma.com/ForgottenRules.html">
+    <link rel="icon" href="images/favicon/favicon-32x32-v2.png" sizes="32x32">
+    <link rel="stylesheet" href="assets/css/playluma.css?v=20260827g">
+    <script src="assets/js/playluma.js?v=20260827d" defer></script>
+    <title>Forgotten Rules — Playluma</title>
+  </head>
+  <body class="page-detail" style="--accent: #3b82f6">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner shell">
+        <a class="brand" href="index.html" aria-label="Playluma home"><span class="brand__mark" aria-hidden="true"></span><span class="brand__text"><span>Playluma</span><small>Games &amp; Apps</small></span></a>
+        <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html">Library</a><a href="#about" aria-current="page">About</a><a href="#media">Media</a><a href="#download">Get the game</a></nav>
+        <a class="header-action" href="index.html#catalogue">All titles</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle><span></span><span></span></button>
       </div>
-      <!-- Preloader End -->
-      <!-- Header Section -->
-      <!-- <header id="home" style="background-image: url('images/ForgottenRules/head.png'); background-size: cover"> -->
-      <header id="home">
-        <nav>
-          <div class="navbar-logo">
-              <a href="#" class="logo">&nbsp;&nbsp;Playluma</a>
-              <a class="logo" style="font-size:20px"> .com</a>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu><a href="index.html">Library</a><a href="#about">About</a><a href="#media">Media</a><a href="#download">Get the game</a></nav>
+    </header>
+
+    <main id="main">
+      <section class="detail-hero" aria-labelledby="page-title">
+        <div class="detail-hero__media"><img src="images/generated/responsive/forgotten-rules-hero-1600.jpg" srcset="images/generated/responsive/forgotten-rules-hero-960.jpg 960w, images/generated/responsive/forgotten-rules-hero-1600.jpg 1600w" sizes="100vw" alt="Sports car overlooking a luminous city at blue hour"></div>
+        <div class="detail-hero__veil"></div><div class="detail-hero__noise" aria-hidden="true"></div>
+        <div class="detail-hero__inner shell">
+          <div class="detail-hero__copy reveal is-revealed">
+            <span class="detail-hero__badge">Open-world game</span>
+            <h1 class="detail-hero__title" id="page-title">Forgotten Rules</h1>
+            <p class="detail-hero__tagline">Your city. Your choices.</p>
+            <p class="detail-hero__lead">A free-roaming action game where you can drive, race, explore and shape your own story across a large open world.</p>
+            <ul class="platform-list" aria-label="Available platforms"><li>Android</li><li>iOS</li><li>First &amp; third person</li></ul>
+            <div class="detail-hero__actions"><a class="button" href="https://play.google.com/store/apps/details?id=com.ruruverse.ForgottenRulesOpenWorld" target="_blank" rel="noopener noreferrer">Google Play <span aria-hidden="true">→</span></a><a class="button button--ghost" href="https://apps.apple.com/us/app/forgotten-rules/id1665256881" target="_blank" rel="noopener noreferrer">App Store</a></div>
           </div>
-  
-          <div id="navbar">
-            <ul>
-              <li><a href="ForgottenRules.html">FORGOTTEN RULES</a></li>
-              <li><a href="RuruRemote.html">RURU REMOTE</a></li>
-              <li><a href="AnatomyView.html">ANATOMY VIEW</a></li>
-              <li><a href="RuruNetwork.html">RURU NETWORK</a></li>
-            </ul>
-          </div>
-          <div id="mobileNav">
-            <span onclick="openNav()">&#9776;</span>
-          </div>
-          <div id="myNav" class="mobileNavOverlay">
-            <div class="overlay-content">
-              <a href="javascript:void()" class="close-btn" onclick="closeNav()"
-                >&times;</a
-              >
-              <a href="ForgottenRules.html" onclick="closeNav()">FORGOTTEN RULES</a>
-              <a href="RuruRemote.html" onclick="closeNav()">RURU REMOTE</a>
-              <a href="AnatomyView.html" onclick="closeNav()">ANATOMY VIEW</a>
-              <a href="RuruNetwork.html" onclick="closeNav()">RURU NETWORK</a>
-            </div>
-          </div>
-  
-        </nav>
-        <!-- <div id="hero">
-          <div class="row">
-            <div class="col span_1_of_2">
-              <div class="hero-description">
-                <h1>
-                  Open World Game.
-                </h1>
-                <p>
-                  ...
-                </p>
-  
-                <a href="#download" class="btn"
-                  ><span class="download-btn">Download Now</span></a
-                >
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="shape-divider">
-          <div class="custom-shape-divider-bottom-1603385849">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-                class="shape-fill"
-              ></path>
-            </svg>
-          </div>
-        </div> -->
-        <button onclick="topFunction()" id="scrollUp" title="Go to top">
-          <svg
-            width="1.5rem"
-            height="1.5rem"
-            viewBox="0 0 16 16"
-            class="bi bi-arrow-up"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-            />
-          </svg>
-        </button>
-      </header>
-      <!-- End: Header Section -->
-      <section id="features"></section>
-  
-      <!-- Download The App Section -->
-      <!-- <section id="download">
-        <div class="row">
-          <img class="app-logo" src="images/ForgottenRules/icon_game.png" alt="" />
-          <h2 class="stylish_heading">
-            Forgotten Rules
-          </h2>
-          <p class="">
-            Open World Game.
-          </p>
-          <a href="https://play.google.com/store/apps/details?id=com.ruruverse.AnatomyView" target="_blank">
-            <img src="images/googleplay.png" alt=""
-          /></a>
-          <a href="https://apps.apple.com/us/app/anatomy-view/id6443550293" target="_blank">
-            <img src="images/appstore.png" alt=""
-          /></a>
+          <div class="detail-hero__app reveal"><img src="images/ForgottenRules/icon512.png" alt="Forgotten Rules app icon"><span>Available now</span></div>
         </div>
-      </section> -->
-      <!-- End: Download The App Section -->
-  
-      <!-- Features Section -->
-      <!-- <section id="features">
-        <div class="row">
-          <div class="col span_1_of_2">
-            <div class="features-images">
-              <img class="features_3" style="filter: drop-shadow(0 5px 20px #e61414)"  src="images/ForgottenRules/01152023162853.png" alt=""/>
-            </div>
+      </section>
+
+      <section class="content-section" id="about">
+        <div class="shell">
+          <div class="section-heading reveal"><p class="eyebrow">Choose your route</p><h2 class="section-title">An open world without a checklist</h2><p class="section-intro">Move through the city at your own pace. Switch perspective, follow an activity or simply see where the road takes you.</p></div>
+          <div class="feature-grid">
+            <article class="feature-card reveal"><span class="feature-card__number">01</span><h3>Race the streets</h3><p>Join challenging events, collect valuable cars, tune different vehicle classes and even take a bus to the starting line.</p></article>
+            <article class="feature-card reveal"><span class="feature-card__number">02</span><h3>Change perspective</h3><p>Move between first- and third-person views while driving, sightseeing and exploring the city.</p></article>
+            <article class="feature-card reveal"><span class="feature-card__number">03</span><h3>Build your loadout</h3><p>Earn coins while you play and use them to equip more advanced items for your character.</p></article>
           </div>
-          <div class="col span_1_of_2">
-            <div class="section-description features-description col1">
-              <h2 class="stylish_heading">
-                Freely do everything <span class="red_dot">.</span>
-              </h2>
-              <p class="little-description">
-                Player can play the game in 1st person, or also experience the game in 3rd person, from which driving, shooting, sightseeing, in Forgotten Rules.
-              </p>
-            </div>
+        </div>
+      </section>
+
+      <section class="content-section content-section--tint" id="media">
+        <div class="shell"><div class="section-heading reveal"><p class="eyebrow">Watch</p><h2 class="section-title">See the city in motion</h2><p class="section-intro">The trailer only loads after you choose to play it, keeping the page fast and private by default.</p></div>
+          <button class="video-launch reveal" type="button" data-video-id="HskFEmxnqFE" data-video-title="Forgotten Rules gameplay trailer" aria-label="Play the Forgotten Rules gameplay trailer"><img src="images/ForgottenRules/01152023130722.png" alt="Forgotten Rules driving gameplay"><span class="video-launch__play" aria-hidden="true">▶</span></button>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="gallery-title">
+        <div class="shell"><div class="section-heading reveal"><p class="eyebrow">Gallery</p><h2 class="section-title" id="gallery-title">Seven views from the open world</h2><p class="section-intro">Open any image, then use the arrow keys or the on-screen controls to move through the gallery.</p></div>
+          <div class="gallery-grid">
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023130722.png"><img src="images/ForgottenRules/01152023130722.png" loading="lazy" alt="Sports car driving through a Forgotten Rules city street"></button>
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023155255.png"><img src="images/ForgottenRules/01152023155255.png" loading="lazy" alt="Forgotten Rules open-world gameplay scene"></button>
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023155703.png"><img src="images/ForgottenRules/01152023155703.png" loading="lazy" alt="Character exploring the Forgotten Rules city"></button>
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023160508.png"><img src="images/ForgottenRules/01152023160508.png" loading="lazy" alt="Vehicle action in Forgotten Rules"></button>
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023162339.png"><img src="images/ForgottenRules/01152023162339.png" loading="lazy" alt="Night-time open-world scene in Forgotten Rules"></button>
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023162838.png"><img src="images/ForgottenRules/01152023162838.png" loading="lazy" alt="Forgotten Rules city and vehicle view"></button>
+            <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/ForgottenRules/01152023131300.png"><img src="images/ForgottenRules/01152023131300.png" loading="lazy" alt="Exploring the road network in Forgotten Rules"></button>
           </div>
-          <div class="col span_1_of_2">
-            <div class="section-description features-description col1">
-              <h2 class="stylish_heading">
-                Update coins to your account per second<span class="red_dot">.</span>
-              </h2>
-              <p class="little-description">
-                With these coins you can equip many more advanced items for your character.
-              </p>
-            </div>
-          </div>
-        </div> -->
+        </div>
+      </section>
 
+      <section class="content-section content-section--tint" aria-labelledby="description-title">
+        <div class="shell showcase-grid"><div class="showcase-copy reveal"><p class="eyebrow">Full description</p><h2 id="description-title">Play it your way</h2><p>As an open-world game, Forgotten Rules lets players freely choose what they want to do. Play in first person or third person and move naturally between driving, action and sightseeing.</p><p>Race through a large city, compete with street racers, start with a simple car and earn more valuable vehicles. Customize a variety of models—or try the surprise of racing a bus.</p><p>Plan a bank robbery, find a route inside, react to difficult situations and escape the police. Customize weapons when the situation demands it. Coins are also added while you play, so you can steadily equip more advanced items without following a fixed quest line.</p></div><div class="showcase-media reveal"><img src="images/ForgottenRules/icon_game.png" loading="lazy" alt="Forgotten Rules key character artwork"></div></div>
+      </section>
 
-		<main>
-            <!-- <section id="download"> -->
-<header class="app__header container">
-	<div class="app__logo-wrapper"> <img class="app__logo" src="images/ForgottenRules/icon512.png" alt="Mobile App Name"></div>
-	<div class="app__infos">
-		<h1 class="app__name">Forgotten Rules</h1>
-		<p class="app__description">Open World Game.</p>
-		<div class="app__buttons app__buttons--desktop">
-			<a href="https://play.google.com/store/apps/details?id=com.ruruverse.ForgottenRulesOpenWorld" class="app__button-play" target="_blank" title="Get on Google Play">
-				<img src="assets/google-play-badge.png" alt="Get on Google Play">
-			</a>
-			<a href="https://apps.apple.com/us/app/forgotten-rules/id1665256881" class="app__button-ios" target="_blank" title="Get on Appstore">
-				<img src="assets/ios-badge.svg" alt="Get on Appstore">
-			</a>
-			<!-- <a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
-				<img src="assets/pwa-badge.png" alt="Go to website">
-			</a> -->
-		</div>
-	</div>
-</header>
-<!-- </section> -->
-<div class="app__buttons app__buttons--mobile container">
-	<a href="https://play.google.com/store/apps/details?id=com.ruruverse.ForgottenRulesOpenWorld" class="app__button-play" target="_blank" title="Get on Google Play">
-		<img src="assets/google-play-badge.png" alt="Get on Google Play">
-	</a>
-	<a href="https://apps.apple.com/us/app/forgotten-rules/id1665256881" class="app__button-ios" target="_blank" title="Get on Appstore">
-		<img src="assets/ios-badge.svg" alt="Get on Appstore">
-	</a>
-	<!-- <a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
-		<img src="assets/pwa-badge.png" alt="Go to website">
-	</a> -->
-</div>
-<section class="app__screenshots app__section">
-	<div class="container">
-		<h2 class="app__section-title">Screenshots</h2>
-	</div>
-	<div class="app__screenshots-wrapper container-desktop">
-		<div class="app__screenshots-list">
-			<a href="images/ForgottenRules/01152023130722.png" class="lightbox">
-                <iframe width="400" height="230"  class="app__screenshot"
-                src="https://www.youtube.com/embed/HskFEmxnqFE?autoplay=1&mute=1">
-                </iframe>
-			</a>
-			<a href="images/ForgottenRules/01152023130722.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023130722.png" class="app__screenshot" alt="" />
-			</a>
-            <a href="images/ForgottenRules/01152023155255.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023155255.png" class="app__screenshot" alt="" />
-			</a>
-            <a href="images/ForgottenRules/01152023155703.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023155703.png" class="app__screenshot" alt="" />
-			</a>
-            <a href="images/ForgottenRules/01152023160508.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023160508.png" class="app__screenshot" alt="" />
-			</a>
-            <a href="images/ForgottenRules/01152023162339.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023162339.png" class="app__screenshot" alt="" />
-			</a>
-            <a href="images/ForgottenRules/01152023162838.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023162838.png" class="app__screenshot" alt="" />
-			</a>
-            <a href="images/ForgottenRules/01152023131300.png" class="lightbox">
-				<img src="images/ForgottenRules/01152023131300.png" class="app__screenshot" alt="" />
-			</a>
-		</div>
-	</div>
-</section>
-<section class="app__fulldescription app__section container">
-	<h2 class="app__section-title">Description</h2>
-	<div class="app__fulldescription-content">
-		<p>As an open world game, Forgotten Rules allows players to freely do everything they want.</p>
-        <p>Player can play the game in 1st person, or also experience the game in 3rd person, from which driving, shooting, sightseeing, in Forgotten Rules becomes more realistic than ever.</p>
-<p>As a role-playing game players can freely do what they want such as:</p>
-<ul>
-<li>Racing
-    <br>• Players experience realistic racing through the large open world, participating in challenging racing events with street racers. Starting from a simple car, you can get valuable cars through participating in game. In addition, you can also customize a variety of vehicle models to participate in the race. One surprise that this game brings is that you can also race by bus. It's a new experience, isn't it?</li>
-<li>Bank robbery
-    <br>• Become a bank robber, find a way to infiltrate the bank, deal with difficult situations and escape the arrest of the police. You can completely customize your own weapons when needed and urgent</li>
-<li>Get coins into your game account every second
-    <br>• You don't need to do any quests in the game. Just enter the game and get coins. With these coins you can equip many more advanced items for your character.</li>
-</ul>
+      <section class="content-section content-section--compact" id="download"><div class="shell download-panel reveal"><div class="download-panel__copy"><p class="eyebrow">Available now</p><h2>Enter the open world</h2><p>Download Forgotten Rules for Android or iOS.</p></div><div class="store-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ruruverse.ForgottenRulesOpenWorld" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get Forgotten Rules on Google Play"></a><a class="store-link" href="https://apps.apple.com/us/app/forgotten-rules/id1665256881" target="_blank" rel="noopener noreferrer"><img src="assets/ios-badge.svg" alt="Download Forgotten Rules on the App Store"></a></div></div></section>
+    </main>
 
-	</div>
-    <div style="padding: 50px">
-        <a href=""> 
-            <img src="images/favicon/android-chrome-192x192.png" style="width: 70px;">
-        </a>
-    </div> 
-</section>
-<!-- <section class="app__featured app__section container">
-	<h2 class="app__section-title">Featured in</h2>
-	<div class="app__featured-content">
-		<a href="" target="_blank" class="app__featured-company"> 
-			<img src="images/favicon/mstile-150x150.png" class="app__featured-image">
-		</a> 
-		<a href="https://github.com/" target="_blank" class="app__featured-company"> 
-			<img src="assets/producthunt.png" class="app__featured-image">
-		</a> 
-	</div>
-</section> -->
-		</main>
-		<section class="footer">
-                <div class="links">
-					<ul>
-                        <li>
-                            <p class="footer__love">
-                                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2023</noscript> All rights reserved
-                            </p>
-                        </li><br>
-                        <li><a href="pages/app-term-conditions.html">Term & Conditions</a></li>
-                        <li><a href="pages/app-privacy-policy.html">Privacy Policy</a></li>
-					</ul>
-                </div>
-			<!-- </div> -->
-        </section>
-
-		<script type="text/javascript" src="assets/tobi.min.js" /></script>
-		<script>
-			window.onload = function () {
-				var tobi = new Tobi();
-			};
-		</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- Main JS Files -->
-        <script src="js/essential.js"></script>
-        <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/main.js"></script>
+    <dialog class="lightbox" data-lightbox aria-label="Forgotten Rules screenshot viewer"><div class="lightbox__body"><div class="lightbox__stage"><img data-lightbox-image alt=""></div><div class="lightbox__controls"><button type="button" data-lightbox-previous aria-label="Previous screenshot">←</button><span data-lightbox-caption aria-live="polite"></span><button type="button" data-lightbox-next aria-label="Next screenshot">→</button><button type="button" data-lightbox-close aria-label="Close screenshot viewer">Close</button></div></div></dialog>
+    <footer class="site-footer"><div class="site-footer__inner shell"><p>© <span data-current-year>2026</span> Playluma. Built for players and creators.</p><nav class="site-footer__links" aria-label="Legal links"><a href="pages/app-term-conditions.html">Terms</a><a href="pages/app-privacy-policy.html">Privacy</a></nav></div></footer>
   </body>
 </html>

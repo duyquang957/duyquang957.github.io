@@ -1,0 +1,875 @@
+.page-goddess {
+  --goddess-gold: #d8b66a;
+  --goddess-gold-bright: #f1d894;
+  --goddess-teal: #5ecdd0;
+  --goddess-ink: #07090d;
+  --goddess-panel: rgba(15, 17, 22, 0.82);
+  color: #f8f3e7;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(50, 156, 160, 0.16), transparent 34rem),
+    radial-gradient(circle at 8% 42%, rgba(193, 142, 58, 0.12), transparent 30rem),
+    var(--goddess-ink);
+}
+
+.goddess-header {
+  border-bottom-color: rgba(216, 182, 106, 0.13);
+  background: linear-gradient(180deg, rgba(5, 7, 10, 0.76), rgba(5, 7, 10, 0.2));
+}
+
+.goddess-header.is-scrolled,
+.goddess-header.menu-active {
+  background: rgba(6, 8, 11, 0.94);
+}
+
+.page-goddess .desktop-nav a::after {
+  background: var(--goddess-gold);
+}
+
+.page-goddess .header-action {
+  border-color: rgba(216, 182, 106, 0.4);
+  background: rgba(216, 182, 106, 0.12);
+}
+
+.page-goddess .header-action:hover {
+  border-color: var(--goddess-gold);
+  background: rgba(216, 182, 106, 0.2);
+}
+
+.goddess-hero {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  align-items: end;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.goddess-hero__background,
+.goddess-hero__veil {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+.goddess-hero__background {
+  z-index: -5;
+  object-fit: cover;
+  object-position: 50% 54%;
+  filter: saturate(0.86) contrast(1.08) brightness(0.73);
+  transform: scale(1.035);
+}
+
+.goddess-hero__veil {
+  z-index: -4;
+  background:
+    linear-gradient(90deg, rgba(5, 7, 10, 0.93) 0%, rgba(5, 7, 10, 0.72) 35%, rgba(5, 7, 10, 0.08) 70%),
+    linear-gradient(180deg, rgba(5, 7, 10, 0.16) 55%, rgba(5, 7, 10, 0.98) 100%);
+}
+
+.goddess-hero__sigil {
+  position: absolute;
+  z-index: -2;
+  top: 15%;
+  right: 5%;
+  width: min(42vw, 610px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(216, 182, 106, 0.17);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 34px rgba(216, 182, 106, 0.018),
+    inset 0 0 0 35px rgba(216, 182, 106, 0.11),
+    0 0 100px rgba(68, 188, 192, 0.12);
+  animation: goddess-sigil 22s linear infinite;
+}
+
+.goddess-hero__sigil::before,
+.goddess-hero__sigil::after {
+  position: absolute;
+  border: 1px solid rgba(216, 182, 106, 0.15);
+  content: "";
+  inset: 17%;
+  transform: rotate(45deg);
+}
+
+.goddess-hero__sigil::after {
+  inset: 32%;
+  border-color: rgba(94, 205, 208, 0.18);
+  border-radius: 50%;
+}
+
+.goddess-hero__character {
+  position: absolute;
+  z-index: -1;
+  right: clamp(-130px, -5vw, -36px);
+  bottom: -2vh;
+  width: min(58vw, 840px);
+  max-width: none;
+  height: min(94svh, 960px);
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(-28px 24px 38px rgba(0, 0, 0, 0.48));
+  animation: goddess-character 8s ease-in-out infinite alternate;
+}
+
+.goddess-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 640px) minmax(260px, 1fr);
+  align-items: end;
+  gap: 34px;
+  padding-top: calc(var(--header-h) + 90px);
+  padding-bottom: 108px;
+}
+
+.goddess-hero__copy {
+  position: relative;
+  z-index: 2;
+}
+
+.goddess-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 16px;
+  color: var(--goddess-gold-bright);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.goddess-kicker span {
+  color: var(--goddess-teal);
+  font-size: 0.62rem;
+}
+
+.goddess-hero h1 {
+  max-width: 8ch;
+  margin: 0;
+  color: #f8e8b5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.7rem, 10.5vw, 9.6rem);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.72;
+  text-shadow: 0 14px 42px rgba(0, 0, 0, 0.58);
+}
+
+.goddess-hero__tagline {
+  max-width: 32ch;
+  margin: 30px 0 12px;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.goddess-hero__lead {
+  max-width: 56ch;
+  margin: 0;
+  color: #d4d1c8;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.goddess-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.goddess-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff9e9;
+  background: rgba(9, 12, 16, 0.55);
+  font-size: 0.79rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 200ms var(--ease-out), border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+
+.goddess-button:hover {
+  border-color: var(--goddess-gold);
+  transform: translateY(-3px);
+}
+
+.goddess-button--primary {
+  border-color: #e9ca7e;
+  color: #171109;
+  background: linear-gradient(135deg, #f0da9b, #bf8f3b);
+  box-shadow: 0 16px 38px rgba(187, 135, 48, 0.22);
+}
+
+.goddess-button--primary:hover {
+  color: #090704;
+  background: linear-gradient(135deg, #fff0b7, #d4a44b);
+  box-shadow: 0 20px 46px rgba(187, 135, 48, 0.34);
+}
+
+.goddess-button--ghost {
+  backdrop-filter: blur(12px);
+}
+
+.goddess-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.goddess-meta li {
+  padding: 6px 10px;
+  border: 1px solid rgba(216, 182, 106, 0.2);
+  color: #cbc8bf;
+  background: rgba(5, 8, 11, 0.45);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.goddess-reward {
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  width: min(100%, 340px);
+  align-items: center;
+  justify-self: end;
+  gap: 14px;
+  padding: 14px 17px;
+  border: 1px solid rgba(239, 210, 139, 0.34);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(41, 31, 18, 0.9), rgba(9, 14, 18, 0.86));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(18px);
+}
+
+.goddess-reward img {
+  width: 70px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.goddess-reward span,
+.goddess-reward strong {
+  display: block;
+}
+
+.goddess-reward span {
+  margin-bottom: 3px;
+  color: var(--goddess-gold-bright);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.goddess-reward strong {
+  color: #fff9e9;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.goddess-scroll {
+  position: absolute;
+  z-index: 3;
+  bottom: 25px;
+  left: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  color: #c8c3b7;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.goddess-scroll i {
+  display: block;
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(var(--goddess-gold), transparent);
+}
+
+.goddess-section {
+  position: relative;
+  padding: clamp(82px, 10vw, 138px) 0;
+  overflow: hidden;
+}
+
+.goddess-section--features::before,
+.goddess-section--gallery::before {
+  position: absolute;
+  z-index: -1;
+  width: 34rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  content: "";
+  background: rgba(64, 184, 189, 0.07);
+  filter: blur(90px);
+}
+
+.goddess-section--features::before {
+  top: 10%;
+  right: -12rem;
+}
+
+.goddess-section--gallery::before {
+  bottom: 4%;
+  left: -14rem;
+  background: rgba(196, 144, 56, 0.08);
+}
+
+.goddess-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.goddess-heading h2,
+.goddess-strategy h2,
+.goddess-cta h2 {
+  margin: 0;
+  color: #f7efd9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.45rem, 5vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.goddess-heading > p:last-child,
+.goddess-strategy__copy > p,
+.goddess-cta__inner > div > p:last-child {
+  max-width: 62ch;
+  margin: 20px 0 0;
+  color: #aaa9a4;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.goddess-features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.goddess-feature {
+  min-height: 270px;
+  padding: 25px;
+  border: 1px solid rgba(216, 182, 106, 0.14);
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.045), transparent 52%),
+    rgba(11, 14, 18, 0.76);
+  transition: transform 240ms var(--ease-out), border-color 240ms ease, background 240ms ease;
+}
+
+.goddess-feature:hover {
+  border-color: rgba(216, 182, 106, 0.46);
+  background: rgba(20, 22, 27, 0.9);
+  transform: translateY(-7px);
+}
+
+.goddess-feature > span {
+  display: block;
+  margin-bottom: 58px;
+  color: var(--goddess-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.8rem;
+}
+
+.goddess-feature h3 {
+  margin: 0 0 12px;
+  color: #f6ecd0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.goddess-feature p {
+  margin: 0;
+  color: #9b9b99;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.goddess-strategy {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+  align-items: center;
+  gap: clamp(34px, 7vw, 96px);
+  margin-top: clamp(74px, 10vw, 132px);
+}
+
+.goddess-strategy__visual {
+  position: relative;
+  padding: 12px;
+  border: 1px solid rgba(216, 182, 106, 0.22);
+  background: rgba(216, 182, 106, 0.05);
+}
+
+.goddess-strategy__visual::before,
+.goddess-strategy__visual::after {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-color: var(--goddess-gold);
+  content: "";
+}
+
+.goddess-strategy__visual::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.goddess-strategy__visual::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.goddess-strategy__visual img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.goddess-strategy__copy ul {
+  display: grid;
+  gap: 0;
+  margin: 34px 0 0;
+  padding: 0;
+  border-top: 1px solid rgba(216, 182, 106, 0.17);
+  list-style: none;
+}
+
+.goddess-strategy__copy li {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(216, 182, 106, 0.17);
+}
+
+.goddess-strategy__copy strong {
+  color: #f5dfaa;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.goddess-strategy__copy li span {
+  color: #9e9e9c;
+  font-size: 0.88rem;
+}
+
+.goddess-section--heroes {
+  background: linear-gradient(180deg, rgba(13, 17, 22, 0.92), rgba(7, 9, 13, 0.98));
+}
+
+.goddess-heading--row {
+  display: grid;
+  max-width: none;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 440px);
+  align-items: end;
+  gap: 30px;
+}
+
+.goddess-heading--row > p {
+  margin: 0 0 4px;
+  color: #a7a6a1;
+  line-height: 1.75;
+}
+
+.goddess-roster {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.goddess-hero-card {
+  position: relative;
+  min-height: 440px;
+  overflow: hidden;
+  border: 1px solid rgba(216, 182, 106, 0.15);
+  background: #101318;
+  isolation: isolate;
+}
+
+.goddess-hero-card::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(4, 6, 9, 0.94) 100%);
+}
+
+.goddess-hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out), filter 300ms ease;
+}
+
+.goddess-hero-card:hover img {
+  filter: saturate(1.12);
+  transform: scale(1.065);
+}
+
+.goddess-hero-card > div {
+  position: absolute;
+  z-index: 2;
+  right: 22px;
+  bottom: 20px;
+  left: 22px;
+}
+
+.goddess-hero-card span {
+  color: var(--goddess-gold-bright);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.goddess-hero-card h3 {
+  margin: 3px 0 0;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+
+.goddess-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.goddess-gallery__item {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(216, 182, 106, 0.16);
+  background: #11151b;
+  cursor: zoom-in;
+}
+
+.goddess-gallery__item::after {
+  position: absolute;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  content: "+";
+  background: rgba(6, 9, 13, 0.64);
+  opacity: 0;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -42%);
+  transition: opacity 180ms ease, transform 180ms ease;
+  backdrop-filter: blur(10px);
+}
+
+.goddess-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out), filter 300ms ease;
+}
+
+.goddess-gallery__item:hover img,
+.goddess-gallery__item:focus-visible img {
+  filter: brightness(0.7);
+  transform: scale(1.045);
+}
+
+.goddess-gallery__item:hover::after,
+.goddess-gallery__item:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.goddess-section--trailer {
+  border-top: 1px solid rgba(216, 182, 106, 0.1);
+  border-bottom: 1px solid rgba(216, 182, 106, 0.1);
+  background: rgba(15, 17, 21, 0.76);
+}
+
+.goddess-trailer-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1.38fr);
+  align-items: center;
+  gap: clamp(34px, 7vw, 92px);
+}
+
+.goddess-trailer-grid .goddess-heading {
+  margin: 0;
+}
+
+.goddess-trailer {
+  margin: 0;
+  border-color: rgba(216, 182, 106, 0.25);
+}
+
+.goddess-trailer .video-launch__play {
+  color: #191208;
+  background: linear-gradient(135deg, #f2dda3, #c7953d);
+}
+
+.goddess-cta {
+  position: relative;
+  padding: clamp(76px, 9vw, 116px) 0;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(8, 10, 14, 0.98), rgba(14, 30, 32, 0.88)),
+    url("assets/hero-bg.jpg") center 56% / cover;
+}
+
+.goddess-cta__inner {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+}
+
+.goddess-cta__inner > img {
+  width: 108px;
+  height: 108px;
+  border: 1px solid rgba(216, 182, 106, 0.4);
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+}
+
+.goddess-cta .goddess-kicker {
+  margin-bottom: 9px;
+}
+
+.goddess-cta h2 {
+  font-size: clamp(2.2rem, 4vw, 3.9rem);
+}
+
+.goddess-footer {
+  border-top-color: rgba(216, 182, 106, 0.13);
+  background: #05070a;
+}
+
+@keyframes goddess-sigil {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes goddess-character {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -12px, 0); }
+}
+
+@media (max-width: 1040px) {
+  .goddess-hero__character {
+    right: -190px;
+    width: 74vw;
+    opacity: 0.82;
+  }
+
+  .goddess-hero__inner {
+    grid-template-columns: minmax(0, 610px) minmax(190px, 1fr);
+  }
+
+  .goddess-features,
+  .goddess-roster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .goddess-feature {
+    min-height: 220px;
+  }
+
+  .goddess-feature > span {
+    margin-bottom: 38px;
+  }
+
+  .goddess-hero-card {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 760px) {
+  .goddess-hero {
+    min-height: 940px;
+  }
+
+  .goddess-hero__background {
+    object-position: 55% center;
+  }
+
+  .goddess-hero__veil {
+    background:
+      linear-gradient(90deg, rgba(5, 7, 10, 0.9), rgba(5, 7, 10, 0.24)),
+      linear-gradient(180deg, rgba(5, 7, 10, 0.16) 30%, rgba(5, 7, 10, 0.98) 78%);
+  }
+
+  .goddess-hero__character {
+    top: 66px;
+    right: -155px;
+    bottom: auto;
+    width: 760px;
+    height: 620px;
+    opacity: 0.72;
+    object-position: center top;
+  }
+
+  .goddess-hero__sigil {
+    top: 10%;
+    right: -28%;
+    width: 86vw;
+  }
+
+  .goddess-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding-top: 360px;
+    padding-bottom: 76px;
+  }
+
+  .goddess-hero h1 {
+    font-size: clamp(4.2rem, 20vw, 7rem);
+  }
+
+  .goddess-reward {
+    justify-self: start;
+  }
+
+  .goddess-scroll {
+    display: none;
+  }
+
+  .goddess-strategy,
+  .goddess-trailer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .goddess-heading--row {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .goddess-heading--row > p {
+    margin-top: -12px;
+  }
+
+  .goddess-cta__inner {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .goddess-cta__inner > img {
+    width: 84px;
+    height: 84px;
+    border-radius: 18px;
+  }
+
+  .goddess-cta__inner > .goddess-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .goddess-hero {
+    min-height: 900px;
+  }
+
+  .goddess-hero__character {
+    right: -205px;
+  }
+
+  .goddess-hero__inner {
+    padding-top: 330px;
+  }
+
+  .goddess-hero__lead {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .goddess-hero__actions {
+    display: grid;
+  }
+
+  .goddess-button {
+    width: 100%;
+  }
+
+  .goddess-meta li:nth-child(3),
+  .goddess-meta li:nth-child(4) {
+    display: none;
+  }
+
+  .goddess-features,
+  .goddess-roster,
+  .goddess-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .goddess-feature {
+    min-height: 0;
+  }
+
+  .goddess-feature > span {
+    margin-bottom: 34px;
+  }
+
+  .goddess-strategy__copy li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+  }
+
+  .goddess-hero-card {
+    min-height: 440px;
+  }
+
+  .goddess-cta__inner {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: center;
+  }
+
+  .goddess-cta__inner > img,
+  .goddess-cta__inner > .goddess-button {
+    justify-self: center;
+  }
+
+  .goddess-cta .goddess-kicker {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .goddess-hero__sigil,
+  .goddess-hero__character {
+    animation: none;
+  }
+}

@@ -1,230 +1,67 @@
-<!DOCTYPE html>
-<html lang="vn">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anatomy View</title>
-
-    <!-- Favicon -->
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="images/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta
-      name="msapplication-config"
-      content="images/favicon/browserconfig.xml"
-    />
-    <meta name="theme-color" content="#262626" />
-
-    <!-- End: Favicon -->
-
-    <!-- Main CSS File -->
-    <link rel="stylesheet" href="css/styles_dark.css" />
-    <link rel="stylesheet" href="css/grid.css" />
-    <!-- End: Main CSS File -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#030713">
+    <meta name="description" content="Study human anatomy in an interactive 3D reference with Anatomy View for Android and iOS.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Playluma">
+    <meta property="og:title" content="Anatomy View — Playluma">
+    <meta property="og:description" content="Rotate, zoom, isolate and study a detailed 3D anatomy reference.">
+    <meta property="og:url" content="https://playluma.com/AnatomyView.html">
+    <meta property="og:image" content="https://playluma.com/assets/og-anatomy-view.png">
+    <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://playluma.com/assets/og-anatomy-view.png">
+    <link rel="canonical" href="https://playluma.com/AnatomyView.html">
+    <link rel="icon" href="images/favicon/favicon-32x32-v2.png" sizes="32x32">
+    <link rel="stylesheet" href="assets/css/playluma.css?v=20260827g">
+    <script src="assets/js/playluma.js?v=20260827d" defer></script>
+    <title>Anatomy View — Playluma</title>
   </head>
-  <body>
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="loader"></div>
-    </div>
-    <!-- Preloader End -->
-    <!-- Header Section -->
-    <header id="home" style="background-image: url('images/AnatomyView/09292022095617.png'); background-size: cover">
-    <!-- <header id="home"> -->
-      <nav>
-        <div class="navbar-logo">
-          <a href="#" class="logo">&nbsp;&nbsp;Playluma</a>
-          <a class="logo" style="font-size:20px"> .com</a>
-        </div>
-
-        <div id="navbar">
-          <ul>
-            <li><a href="ForgottenRules.html">FORGOTTEN RULES</a></li>
-            <li><a href="RuruRemote.html">RURU REMOTE</a></li>
-            <li><a href="AnatomyView.html">ANATOMY VIEW</a></li>
-            <li><a href="RuruNetwork.html">RURU NETWORK</a></li>
-          </ul>
-        </div>
-        <div id="mobileNav">
-          <span onclick="openNav()">&#9776;</span>
-        </div>
-        <div id="myNav" class="mobileNavOverlay">
-          <div class="overlay-content">
-            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
-              >&times;</a
-            >
-            <a href="ForgottenRules.html" onclick="closeNav()">FORGOTTEN RULES</a>
-            <a href="RuruRemote.html" onclick="closeNav()">RURU REMOTE</a>
-            <a href="AnatomyView.html" onclick="closeNav()">ANATOMY VIEW</a>
-            <a href="RuruNetwork.html" onclick="closeNav()">RURU NETWORK</a>
-          </div>
-        </div>
-
-      </nav>
-      <div id="hero">
-        <div class="row">
-          <div class="col span_1_of_2">
-            <div class="hero-description">
-              <h1>
-                3D Anatomy reference app.
-              </h1>
-              <p>
-                Free to make notes and be able to slice each anatomical part by yourself.
-              </p>
-
-              <a href="#download" class="btn"
-                ><span class="download-btn">Download Now</span></a
-              >
-            </div>
-          </div>
-          <!-- <div class="col span_1_of_2">
-            <img class="hero-img" style="box-shadow: 0 10px 30px rgba(54, 54, 54, 0.3)" src="images/AnatomyView/09292022095617.png" alt="" />
-          </div> -->
-        </div>
+  <body class="page-detail" style="--accent: #22d3ee">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner shell">
+        <a class="brand" href="index.html" aria-label="Playluma home"><span class="brand__mark" aria-hidden="true"></span><span class="brand__text"><span>Playluma</span><small>Games &amp; Apps</small></span></a>
+        <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html">Library</a><a href="#learn" aria-current="page">Learn</a><a href="#video">Video</a><a href="#download">Get the app</a></nav>
+        <a class="header-action" href="index.html#catalogue">All titles</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle><span></span><span></span></button>
       </div>
-      <div class="shape-divider">
-        <div class="custom-shape-divider-bottom-1603385849">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-      </div>
-      <button onclick="topFunction()" id="scrollUp" title="Go to top">
-        <svg
-          width="1.5rem"
-          height="1.5rem"
-          viewBox="0 0 16 16"
-          class="bi bi-arrow-up"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-          />
-        </svg>
-      </button>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu><a href="index.html">Library</a><a href="#learn">Learn</a><a href="#video">Video</a><a href="#download">Get the app</a></nav>
     </header>
-    <!-- End: Header Section -->
 
-    <section id="features"></section>
-
-    <!-- Download The App Section -->
-    <section id="download">
-      <div class="row">
-        <img class="app-logo" src="images/AnatomyView/app_logo.png" alt="" />
-        <h2 class="stylish_heading">
-          Anatomy View
-        </h2>
-        <p class="">
-          <!-- Nhiều ưu đãi đang chờ bạn khi là những người đầu tiên tải xuống ứng dụng. -->
-        </p>
-        <a href="https://play.google.com/store/apps/details?id=com.ruruverse.AnatomyView" target="_blank">
-          <img src="images/googleplay.png" alt=""
-        /></a>
-        <a href="https://apps.apple.com/us/app/anatomy-view/id6443550293" target="_blank">
-          <img src="images/appstore.png" alt=""
-        /></a>
-      </div>
-    </section>
-    <!-- End: Download The App Section -->
-
-    <!-- Features Section -->
-    <section id="features">
-      <div class="row">
-        <div class="col span_1_of_2">
-          <div class="features-images">
-            <iframe  height="652" style="filter: drop-shadow(0 5px 20px #585858); border-radius: 20px;"
-              src="https://www.youtube.com/embed/ZYZHsQ-znwQ?playlist=ZYZHsQ-znwQ&loop=1&autoplay=1&mute=1&showinfo=0&controls=0">
-            </iframe>
-          </div>
+    <main id="main">
+      <section class="detail-hero" aria-labelledby="page-title">
+        <div class="detail-hero__media"><img src="images/generated/responsive/anatomy-view-hero-1600.jpg" srcset="images/generated/responsive/anatomy-view-hero-960.jpg 960w, images/generated/responsive/anatomy-view-hero-1600.jpg 1600w" sizes="100vw" alt="Educational anatomical model illuminated in a blue reference studio"></div><div class="detail-hero__veil"></div><div class="detail-hero__noise" aria-hidden="true"></div>
+        <div class="detail-hero__inner shell">
+          <div class="detail-hero__copy reveal is-revealed"><span class="detail-hero__badge">3D educational reference</span><h1 class="detail-hero__title" id="page-title">Anatomy View</h1><p class="detail-hero__tagline">Study structure in three dimensions</p><p class="detail-hero__lead">Rotate a highly detailed model, zoom into key structures, make notes and isolate anatomical parts from one focused mobile reference.</p><ul class="platform-list" aria-label="Available platforms"><li>Android</li><li>iOS</li><li>Interactive 3D</li></ul><div class="detail-hero__actions"><a class="button" href="https://play.google.com/store/apps/details?id=com.ruruverse.AnatomyView" target="_blank" rel="noopener noreferrer">Google Play <span aria-hidden="true">→</span></a><a class="button button--ghost" href="https://apps.apple.com/us/app/anatomy-view/id6443550293" target="_blank" rel="noopener noreferrer">App Store</a></div></div>
+          <div class="detail-hero__app reveal"><img src="images/AnatomyView/app_logo.png" alt="Anatomy View app icon"><span>Education · Reference</span></div>
         </div>
-        <div class="col span_1_of_2">
-          <div class="section-description features-description col1">
-            <h2 class="stylish_heading">
-              Simple Control<span class="red_dot">.</span>
-            </h2>
-            <p class="little-description">
-              Allows you to rotate 360°, Zoom and move the camera around a highly realistic 3D model, through a simple and intuitive interface you can observe the anatomical structure.
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <!-- <div class="row second-features-row">
-        <div class="col span_1_of_2">
-          <div class="section-description features-description">
-            <h2 class="stylish_heading">
-              Simple Control<span class="red_dot">.</span>
-            </h2>
-            <p class="little-description">
-              The Anatomy View app allows you to rotate 360°, Zoom and move the camera around a highly realistic 3D model, through a simple and intuitive interface you can observe the anatomical structure.
-            </p>
-          </div>
-        </div>
-        <div class="col span_1_of_2">
-          <div class="features-images">
-            <iframe  height="650" style="filter: drop-shadow(0 5px 20px #585858)"
-              src="https://www.youtube.com/embed/ZYZHsQ-znwQ?playlist=ZYZHsQ-znwQ&loop=1&autoplay=1&mute=1&showinfo=0&controls=0">
-            </iframe>
-          </div>
-        </div>
-      </div> -->
-    </section>
+      <section class="content-section" id="learn">
+        <div class="shell"><div class="section-heading reveal"><p class="eyebrow">Designed for study</p><h2 class="section-title">Move from overview to detail</h2><p class="section-intro">A clean set of controls keeps the model at the center, whether you are reviewing a full system or one anatomical structure.</p></div><div class="feature-grid">
+          <article class="feature-card reveal"><span class="feature-card__number">01</span><h3>Simple control</h3><p>Rotate the model through 360 degrees, zoom smoothly and move the camera around a realistic three-dimensional study subject.</p></article>
+          <article class="feature-card reveal"><span class="feature-card__number">02</span><h3>Slice and isolate</h3><p>Separate anatomical parts so complex structures are easier to understand from multiple angles.</p></article>
+          <article class="feature-card reveal"><span class="feature-card__number">03</span><h3>Make it yours</h3><p>Add notes while you study and build a clearer path through the structures you want to remember.</p></article>
+        </div></div>
+      </section>
 
-    
+      <section class="content-section content-section--tint"><div class="shell showcase-grid"><div class="showcase-media reveal"><img src="images/AnatomyView/anatomy-transparent.png" loading="lazy" alt="Transparent Anatomy View anatomical model"></div><div class="showcase-copy reveal"><p class="eyebrow">Spatial learning</p><h2>See how structures relate</h2><p>Flat diagrams are useful, but the body is spatial. Anatomy View lets you orbit, reposition and inspect the model to understand how neighboring structures fit together.</p><ul class="showcase-list"><li>Highly detailed three-dimensional model</li><li>Intuitive camera movement and zoom</li><li>Focused reference for independent study</li></ul></div></div></section>
 
-    <!-- Footer Section -->
-    <section id="footer">
-      <div class="links">
-        <ul>
-          <li><a href="#home"><script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2023</noscript> PLAYLUMA</a></li>
-          <li><a href="pages/app-term-conditions.html">Term & Conditions</a></li>
-          <li><a href="pages/app-privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      
-    </section>
-    <!-- End: Footer Section -->
+      <section class="content-section" id="video"><div class="shell"><div class="section-heading reveal"><p class="eyebrow">Demonstration</p><h2 class="section-title">The model in motion</h2><p class="section-intro">Press play to load the Anatomy View demonstration from YouTube.</p></div><button class="video-launch reveal" type="button" data-video-id="ZYZHsQ-znwQ" data-video-title="Anatomy View demonstration" aria-label="Play the Anatomy View demonstration"><img src="images/AnatomyView/09292022095617.png" alt="Anatomy View model and controls"><span class="video-launch__play" aria-hidden="true">▶</span></button></div></section>
 
-    <!-- Required JavaScript Files & CDN -->
-    <!-- JQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <section class="content-section content-section--tint" aria-labelledby="screens-title"><div class="shell"><div class="section-heading reveal"><p class="eyebrow">Real app views</p><h2 class="section-title" id="screens-title">A reference you can explore</h2><p class="section-intro">These images come directly from the app.</p></div><div class="gallery-grid">
+        <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/AnatomyView/09292022094705.png"><img src="images/AnatomyView/09292022094705.png" loading="lazy" alt="Anatomy View full-body model screen"></button>
+        <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/AnatomyView/09292022095617.png"><img src="images/AnatomyView/09292022095617.png" loading="lazy" alt="Anatomy View detailed model screen"></button>
+        <button class="gallery-item reveal" type="button" data-gallery-item data-gallery-src="images/AnatomyView/09292022095647.png"><img src="images/AnatomyView/09292022095647.png" loading="lazy" alt="Anatomy View anatomical layer screen"></button>
+      </div></div></section>
 
-    <!-- Main JS Files -->
-    <script src="js/essential.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/main.js"></script>
+      <section class="content-section content-section--compact" id="download"><div class="shell download-panel reveal"><div class="download-panel__copy"><p class="eyebrow">Available now</p><h2>Bring the reference with you</h2><p>Download Anatomy View for Android or iOS.</p></div><div class="store-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ruruverse.AnatomyView" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get Anatomy View on Google Play"></a><a class="store-link" href="https://apps.apple.com/us/app/anatomy-view/id6443550293" target="_blank" rel="noopener noreferrer"><img src="assets/ios-badge.svg" alt="Download Anatomy View on the App Store"></a></div></div></section>
+    </main>
+    <dialog class="lightbox" data-lightbox aria-label="Anatomy View screenshot viewer"><div class="lightbox__body"><div class="lightbox__stage"><img data-lightbox-image alt=""></div><div class="lightbox__controls"><button type="button" data-lightbox-previous aria-label="Previous screenshot">←</button><span data-lightbox-caption aria-live="polite"></span><button type="button" data-lightbox-next aria-label="Next screenshot">→</button><button type="button" data-lightbox-close aria-label="Close screenshot viewer">Close</button></div></div></dialog>
+    <footer class="site-footer"><div class="site-footer__inner shell"><p>© <span data-current-year>2026</span> Playluma. Built for players and creators.</p><nav class="site-footer__links" aria-label="Legal links"><a href="pages/app-term-conditions.html">Terms</a><a href="pages/app-privacy-policy.html">Privacy</a></nav></div></footer>
   </body>
 </html>

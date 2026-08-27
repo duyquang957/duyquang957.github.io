@@ -1,16 +1,140 @@
-<!DOCTYPE html>
-<html>
-   <head>
-	
-      <title>RuruVerse</title>
-	  <link rel="stylesheet" href="assets/style.css" />
-	  <link rel="icon" href="images/favicon/favicon-32x32.png" />
-      <meta http-equiv = "refresh" content = "0; url =ForgottenRules.html" />
-   </head>
-   <body>
-	<div class="preloader">
-		<div class="loader">
-		</div>
-	</div>
-   </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#030713">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Explore games and apps created by Playluma, from open worlds and football management to creative utilities.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Playluma">
+    <meta property="og:title" content="Playluma — Games &amp; Apps">
+    <meta property="og:description" content="Discover original games and focused apps built for play, creativity and everyday control.">
+    <meta property="og:url" content="https://playluma.com/">
+    <meta property="og:image" content="https://playluma.com/assets/og-playluma.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Playluma — Games &amp; Apps">
+    <meta name="twitter:description" content="Discover original games and focused apps built for play, creativity and everyday control.">
+    <meta name="twitter:image" content="https://playluma.com/assets/og-playluma.png">
+    <link rel="canonical" href="https://playluma.com/">
+    <link rel="icon" href="images/favicon/favicon-32x32-v2.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon-v2.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/playluma.css?v=20260827g">
+    <script src="assets/js/playluma.js?v=20260827g" defer></script>
+    <script src="content/catalog-data.js" defer></script>
+    <script src="assets/js/catalog.js?v=20260827g" defer></script>
+    <title>Playluma — Games &amp; Apps</title>
+  </head>
+  <body class="page-home">
+    <a class="skip-link" href="#library">Skip to the library</a>
+
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner shell">
+        <a class="brand" href="index.html" aria-label="Playluma home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span>Playluma</span>
+            <small>Games &amp; Apps</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#library" aria-current="page">Library</a>
+          <a href="#catalogue">Games</a>
+          <a href="#catalogue">Apps</a>
+          <a href="pages/app-privacy-policy.html">Privacy</a>
+        </nav>
+
+        <a class="header-action" href="#catalogue">Browse titles</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
+        <a href="#library">Library</a>
+        <a href="#catalogue">Games &amp; Apps</a>
+        <a href="pages/app-privacy-policy.html">Privacy policy</a>
+        <a href="pages/app-term-conditions.html">Terms &amp; conditions</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="library" id="library" aria-labelledby="selected-title">
+        <div class="library-backdrop" aria-hidden="true">
+          <div class="library-backdrop__layer is-active" data-backdrop-layer style="background-image: url('images/generated/responsive/revdashx-hero-1600.jpg')"></div>
+          <div class="library-backdrop__layer" data-backdrop-layer></div>
+        </div>
+        <div class="library-grid" aria-hidden="true"></div>
+        <div class="library-orb" aria-hidden="true"></div>
+
+        <div class="library__inner shell">
+          <div class="library-copy reveal is-revealed">
+            <p class="eyebrow">Playluma library</p>
+            <span class="library-copy__type" data-selected-kind>App</span>
+            <h1 class="library-copy__title" id="selected-title" data-selected-title>RevDashx</h1>
+            <p class="library-copy__summary" data-selected-summary>A live GPS dashboard with responsive supercar-inspired gauges and engine audio that follows your speed.</p>
+            <div class="library-copy__meta" aria-label="Selected title details">
+              <span data-selected-badge>GPS engine sounds</span>
+              <span class="meta-dot" aria-hidden="true"></span>
+              <span data-selected-platforms>Android · iOS</span>
+            </div>
+            <div class="library-copy__actions">
+              <a class="button" href="revdashx/" data-selected-link>
+                View title <span class="button__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="button button--ghost" href="#catalogue">Explore all</a>
+            </div>
+          </div>
+
+          <div class="catalogue-panel" id="catalogue" aria-labelledby="catalogue-heading">
+            <h2 id="catalogue-heading" class="eyebrow">Choose your next experience</h2>
+            <div class="catalogue-tools">
+              <div class="catalogue-tabs" role="group" aria-label="Filter catalogue">
+                <button class="catalogue-tab" type="button" aria-pressed="true" data-catalogue-filter="all">All</button>
+                <button class="catalogue-tab" type="button" aria-pressed="false" data-catalogue-filter="game">Games</button>
+                <button class="catalogue-tab" type="button" aria-pressed="false" data-catalogue-filter="app">Apps</button>
+              </div>
+              <div class="catalogue-search">
+                <label class="sr-only" for="catalogue-search-input">Search titles</label>
+                <input id="catalogue-search-input" type="search" autocomplete="off" placeholder="Search the library" data-catalogue-search>
+                <button class="catalogue-search__clear" type="button" aria-label="Clear search" data-clear-search>×</button>
+              </div>
+            </div>
+
+            <div class="catalogue-rail-wrap">
+              <div class="catalogue-rail" aria-label="Playluma titles" data-catalogue-rail></div>
+              <div class="catalogue-empty" data-catalogue-empty>
+                <h2>No matching titles</h2>
+                <p>Try a different search or switch back to all titles.</p>
+              </div>
+              <div class="catalogue-error" role="alert" data-catalogue-error>
+                <h2>The library could not be loaded</h2>
+                <p>Please refresh the page. If the problem continues, check content/catalog-data.js.</p>
+              </div>
+            </div>
+            <p class="catalogue-status" role="status" aria-live="polite" data-catalogue-status>Loading the library…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner shell">
+        <p>© <span data-current-year>2026</span> Playluma. Built for players and creators.</p>
+        <nav class="site-footer__links" aria-label="Legal links">
+          <a href="pages/app-term-conditions.html">Terms</a>
+          <a href="pages/app-privacy-policy.html">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+
+    <noscript>
+      <p class="shell">JavaScript is required to load the interactive library. You can still open <a href="RealChess3rd/">Real Chess 3rd</a>, <a href="MakeRaceTrack/">Make Race Track</a>, <a href="GoddessArea/">Goddess Area</a>, <a href="ForgottenRules.html">Forgotten Rules</a>, <a href="AnatomyView.html">Anatomy View</a>, <a href="RuruNetwork.html">Ruru Network</a>, <a href="RuruRemote.html">Ruru Remote</a>, <a href="revdashx/">RevDashx</a> or <a href="TrophyboundManager/">Trophybound Manager</a>.</p>
+    </noscript>
+  </body>
 </html>
