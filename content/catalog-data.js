@@ -2,6 +2,18 @@ window.PLAYLUMA_CATALOG = {
   "version": 1,
   "items": [
     {
+      "id": "miulix",
+      "title": "Miulix Learn English",
+      "kind": "game",
+      "href": "miulix/",
+      "summary": "Join Mimo the explorer cat to learn vocabulary, listening and reading through fun story-driven missions.",
+      "cover": "miulix/assets/banner.png",
+      "icon": "miulix/assets/icon.png",
+      "platforms": ["Android", "iOS"],
+      "badge": "Story adventure",
+      "accent": "#a78bfa"
+    },
+    {
       "id": "revdashx",
       "title": "RevDashx",
       "kind": "app",
